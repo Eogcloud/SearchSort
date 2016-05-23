@@ -10,15 +10,35 @@ function generateRandomNumbers(amount) {
 //SORTING
 /*********/
 
-function quickSort(array){
-	var pivot = Math.floor(array.length/2);
+function quickSort(array) {
+	var pivot = Math.floor(array.length / 2);
 	var left = array[0];
-	var right = array[array.length-1];
-	
+	var right = array[array.length - 1];
+
 }
 
 function bubbleSort(array) {
+	var swap;
+	while (swap) {
+		swap = false;
+		for (var i = 0; i < array.length - 1; i++) {
+			if (array[i] > array[i + 1]) {
+				//swap variable contents
+				array[i] = array[i] + array[i + 1];
+				array[i + 1] = array[i] - array[i + 1];
+				array[i] = array[i] - array[i + 1];
+				swap = true;
+			}
+		}
+	}
+	return array
+}
 
+function mergeSort(array) {
+	if(array.length<=1){
+		return array;
+	}
+	
 }
 
 /*********/
