@@ -6,9 +6,9 @@ function generateRandomNumbers(amount) {
 	return nums;
 }
 
-/*********/
-//SORTING
-/*********/
+/***********/
+/* Sorting */
+/***********/
 
 function quickSort(array) {
 	var pivot = Math.floor(array.length / 2);
@@ -35,15 +35,38 @@ function bubbleSort(array) {
 }
 
 function mergeSort(array) {
-	if(array.length<=1){
+	if (array.length <= 1) {
 		return array;
 	}
-	
+
+	var middle = parseInt(array.length / 2);
+    var left = array.slice(0, middle);
+    var right = array.slice(middle, array.length);
+
+	function merge(left, right) {
+		var result = [];
+
+		while (left.length && right.length) {
+			if (left[0] <= right[0]) {
+				result.push(left.shift());
+			} else {
+				result.push(right.shift());
+			}
+		}
+
+		while (left.length)
+			result.push(left.shift());
+
+		while (right.length)
+			result.push(right.shift());
+
+		return result;
+	}
 }
 
-/*********/
-//Searching
-/*********/
+/*************/
+/* Searching */
+/*************/
 function binarySearch(search, array) {
 	//check for valid array and number.
 	if (search.typeOf("number") && Array.isArray(array)) {
