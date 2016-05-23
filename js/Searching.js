@@ -1,15 +1,9 @@
-var toBeSorted = [];
-
 function generateRandomNumbers(amount) {
 	var nums = [];
 	for (var i = 0; i < amount; i++) {
-		nums[i] = Math.Floor(Math.Random() * 11);
+		nums[i] = Math.floor(Math.random() * 11);
 	}
 	return nums;
-}
-
-function bubbleSort(array) {
-
 }
 
 /*********/
@@ -23,6 +17,9 @@ function quickSort(array){
 	
 }
 
+function bubbleSort(array) {
+
+}
 
 /*********/
 //Searching

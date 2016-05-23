@@ -2,17 +2,40 @@
 	<html lang="en">
 
 	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-		crossorigin="anonymous">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-		crossorigin="anonymous"></script>
-		<script src="./searching.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="../js/searching.js"></script>
+		<script src="../js/SearcherController.js"></script>
 	</head>
 
 	<body>
-		<h1></h1>
-		<p> On this page you'll find some interactive controls that showcase some of the most common search and sort algorithms. They've all be implemented using basic JS only. </p>
 		<div class="container-fluid">
+			<header>
+				<h1>Search|Sort</h1>
+				<p> On this page you'll find some interactive controls that showcase some of the most common search and sort algorithms.
+					They've all be implemented using basic JS only. </p>
+			</header>
+			<hr>
+			<main>
+				<form class="form-inline">
+					<div class="form-group">
+						<button type="button" class="btn btn-success text-center" id="generateButton" onClick="generateNumbersButton()">Generate Random Numbers</button>
+						<input type="text" id="randomNumbers" disabled>
+					</div>
+				</form>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<button type="button" class="btn btn-info text-center" id="binarySearchButton" onClick="doBinarySearch">Binary Search</button>
+						<input type="text" id="binarySearchValue">
+						<input type="text" id="randomNumbers" placeholder="Binary Search found VALUE at INDEX, it took X seconds." disabled>
+					</div>
+				</form>
+			</main>
+			<footer class="text-center">
+				<hr>
+				<p class="text-center">Written and coded by <a href="/" target="blank">Eamonn O Broithe</a></p>
+			</footer>
 		</div>
 	</body>
 
